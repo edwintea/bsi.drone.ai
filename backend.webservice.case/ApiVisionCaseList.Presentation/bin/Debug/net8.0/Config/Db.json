@@ -1,0 +1,4 @@
+{
+    "Db": "User ID=rnd_eagle;Password=rndeagle2024;Host=azbsisqlt001.postgres.database.azure.com;Port=5432;Database=eagle_drone;Pooling=true;SearchPath=poc;",
+    "DbArea": "User ID=rnd_eagle;Password=rndeagle2024;Host=azbsisqlt001.postgres.database.azure.com;Port=5432;Database=eagle_drone;Pooling=true;SearchPath=poc_location;"
+}

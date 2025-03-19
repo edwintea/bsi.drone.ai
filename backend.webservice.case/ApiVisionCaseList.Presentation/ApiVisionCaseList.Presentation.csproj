@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="ImageDetection\26072024\**" />
+    <Content Remove="ImageDetection\26072024\**" />
+    <EmbeddedResource Remove="ImageDetection\26072024\**" />
+    <None Remove="ImageDetection\26072024\**" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="Asp.Versioning.Http" Version="8.1.0" />
+    <PackageReference Include="Asp.Versioning.Mvc.ApiExplorer" Version="8.1.0" />
+    <PackageReference Include="FirebaseAdmin" Version="3.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="8.0.7" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.19.6" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\ApiVisionCaseList.Application\ApiVisionCaseList.Application.csproj" />
+    <ProjectReference Include="..\ApiVisionCaseList.Infrastructure\ApiVisionCaseList.Infrastructure.csproj" />
+    <ProjectReference Include="..\ApiVisionCaseList.Persistence\ApiVisionCaseList.Persistence.csproj" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Folder Include="ImageDetection\" />
+    <Folder Include="ImageDetection\output\" />
+    <Folder Include="ImageDetection\output\detected\20240804\" />
+  </ItemGroup>
+
+</Project>

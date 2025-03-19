@@ -1,0 +1,103 @@
+﻿@using System.Net.Http.Headers
+@using System.Text.Json
+@using System.Linq
+@inject IJSRuntime JSRuntime
+@inject IHttpClientFactory ClientFactory
+@inject IDialogService DialogService
+@inject IConfiguration Configuration
+
+<div class="pt-5">
+    <MudTable Items="@Elements.Data" Hover="true" Bordered="true" CustomHeader="true" >
+        <ToolBarContent>
+            <MudText Typo="Typo.h6">History</MudText>
+        </ToolBarContent>
+        <HeaderContent>
+            <MudTh>Image</MudTh>
+            <MudTh>Image Object</MudTh>
+        </HeaderContent>
+        <RowTemplate>
+            <MudTd DataLabel="Image">
+                <MudButton Variant="Variant.Text" OnClick="(e)=>imageUpload(e,context.urlFile)" Color="Color.Primary">@context.urlFile</MudButton>
+            </MudTd>
+            <MudTd DataLabel="Image Object">
+                <MudButton Variant="Variant.Text" OnClick="(e)=>imageOutput(e,context.urlFileObject)" Color="Color.Primary">@context.urlFileObject</MudButton>
+            </MudTd>
+        </RowTemplate>
+        <PagerContent>
+            <MudTablePager />
+        </PagerContent>
+    </MudTable>
+</div>
+
+@code {
+    private string searchString1 = "";
+    private HistoryObjectDetection selectedItem1 = new HistoryObjectDetection();
+    private HashSet<HistoryObjectDetection> selectedItems = new HashSet<HistoryObjectDetection>();
+    private HistoryObjectDetection Elements = new HistoryObjectDetection();
+    public string imagesrcUpload = string.Empty;
+    public string imageSrcOutput = string.Empty;
+    private string ServiceBackendUpload = string.Empty;
+    protected override async Task OnInitializedAsync()
+    {
+        ServiceBackendUpload = Configuration["UrlBackendUpload"];
+        var client = ClientFactory.CreateClient();
+        var response = await client.GetAsync(ServiceBackendUpload+"/historydetect");
+        if (response.IsSuccessStatusCode)
+        {
+            var options = new JsonSerializerOptions
+                {
+                    PropertyNameCaseInsensitive = true,
+                };
+            var responsea = response.Content.ReadAsStringAsync();
+            Elements = await response.Content.ReadFromJsonAsync<HistoryObjectDetection>(options);
+        }
+    }
+    async Task imageUpload(MouseEventArgs args,string namafile)
+    {
+        PostHistoryObjectDetection postHistory = new PostHistoryObjectDetection();
+        var client = ClientFactory.CreateClient();
+        postHistory.nameFile = namafile;
+        postHistory.Category = "uploads";
+        var response = await client.PostAsJsonAsync(ServiceBackendUpload + "/searchimageupload", postHistory);
+        if (response.IsSuccessStatusCode)
+        {
+            byte[] image = await response.Content.ReadAsByteArrayAsync();
+            var imagesrc = Convert.ToBase64String(image);
+            imagesrcUpload = string.Format("data:image/jpeg;base64,{0}", imagesrc);
+            var parameters = new DialogParameters<ImageShowingObjectDetection>
+            {
+                {x=>x.Image,imagesrcUpload}
+            };
+
+            var dialogOption = new DialogOptions()
+            {
+                CloseButton=true,
+
+            };
+            var dialog = await DialogService.ShowAsync<ImageShowingObjectDetection>(namafile, parameters, dialogOption);
+            var result = await dialog.Result;
+            
+        }
+    }
+    async Task imageOutput(MouseEventArgs args, string namafile)
+    {
+        PostHistoryObjectDetection postHistory = new PostHistoryObjectDetection();
+        var client = ClientFactory.CreateClient();
+        postHistory.nameFile = namafile;
+        postHistory.Category = "Output";
+        var json = JsonSerializer.Serialize(postHistory);
+        var response = await client.PostAsJsonAsync("http://localhost:5060/searchimageupload", postHistory);
+        if (response.IsSuccessStatusCode)
+        {
+            byte[] image = await response.Content.ReadAsByteArrayAsync();
+            var imagesrc = Convert.ToBase64String(image);
+            imageSrcOutput = string.Format("data:image/jpeg;base64,{0}", imagesrc);
+            var parameters = new DialogParameters<ImageShowingObjectDetection>
+            {
+                {x=>x.Image,imageSrcOutput}
+            };
+            var dialog = await DialogService.ShowAsync<ImageShowingObjectDetection>(namafile, parameters);
+            var result = await dialog.Result;
+        }
+    }
+}

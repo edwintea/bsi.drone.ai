@@ -1,0 +1,22 @@
+﻿@page "/map"
+@inject IJSRuntime jsInvoker
+<div id="map" style="height: 500px;"></div>
+
+@code {
+    [Parameter]
+    [SupplyParameterFromQuery(Name ="lat")]
+    public double Lat { get; set; }
+
+    [Parameter]
+    [SupplyParameterFromQuery(Name = "long")]
+    public double Longti { get; set; }
+
+    
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await jsInvoker.InvokeVoidAsync("initializeLeafletMap",Longti,Lat);
+        }
+    }
+}

@@ -1,0 +1,53 @@
+﻿@using System.Net.Http.Headers
+@using System.Text.Json
+@using System.Linq
+@inject IJSRuntime JSRuntime
+@inject IHttpClientFactory ClientFactory
+@inject ISnackbar Snackbar
+@inject IConfiguration Configuration
+
+<MudDialogProvider />
+<MudDialog>
+    <DialogContent>
+        <MudForm @ref="form" @bind-IsValid="@success" Model="@model">
+            <MudTextField T="string" Label="Username" @bind-Value=model.UserName Required RequiredError="User name is required! "/>
+            <MudTextField T="string" Label="Email" @bind-Value="model.Email" Required RequiredError="Email is required! " />
+            <MudTextField T="string" Label="Password" InputType="InputType.Password" @bind-Value="model.Password" />
+            <MudTextField T="string" Label="FullName" @bind-Value="model.FullName" />            
+        </MudForm>
+    </DialogContent>
+    <DialogActions>
+        <MudButton OnClick="Cancel">Cancel</MudButton>
+        <MudButton Color="Color.Primary" OnClick="SendValue">Submit</MudButton>
+    </DialogActions>
+</MudDialog>
+
+@code {
+    [CascadingParameter]
+    private MudDialogInstance? MudDialog { get; set; }
+    private string ServiceBackendUserList = string.Empty;
+    bool success;
+    MudForm form;
+    WorkerCreateUpdateData model = new WorkerCreateUpdateData();
+    private async Task  SendValue()
+    {
+        ServiceBackendUserList = Configuration["UrlBackendUser"];
+        model.StatusId = 1;
+        model.RoleId = 2;
+        WorkerCreateUpdate request = new WorkerCreateUpdate();
+        request.Data = model;
+        var client = ClientFactory.CreateClient();
+        var response = await client.PostAsJsonAsync(ServiceBackendUserList+"/user/create", request);
+        if (response.IsSuccessStatusCode)
+        {
+            var options = new JsonSerializerOptions
+                {
+                    PropertyNameCaseInsensitive = true,
+                };
+            var responsea = response.Content.ReadAsStringAsync();
+            MudDialog.Close();
+        }
+    }
+    private void Cancel() => MudDialog.Cancel();
+
+}

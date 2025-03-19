@@ -1,0 +1,97 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\task\\projects\\BSI.RND.DRONEAI\\frontend.webapp\\WebDroneAi\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\WebDroneAi.bundle.scp.css",
+      "PackagePath": "staticwebassets\\WebDroneAi.b6mt0uy6dz.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\task\\projects\\BSI.RND.DRONEAI\\frontend.webapp\\WebDroneAi\\wwwroot\\EiraVision1.png",
+      "PackagePath": "staticwebassets\\EiraVision1.png"
+    },
+    {
+      "Id": "C:\\task\\projects\\BSI.RND.DRONEAI\\frontend.webapp\\WebDroneAi\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\task\\projects\\BSI.RND.DRONEAI\\frontend.webapp\\WebDroneAi\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\task\\projects\\BSI.RND.DRONEAI\\frontend.webapp\\WebDroneAi\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "PackagePath": "staticwebassets\\css\\open-iconic"
+    },
+    {
+      "Id": "C:\\task\\projects\\BSI.RND.DRONEAI\\frontend.webapp\\WebDroneAi\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
+      "PackagePath": "staticwebassets\\css\\open-iconic"
+    },
+    {
+      "Id": "C:\\task\\projects\\BSI.RND.DRONEAI\\frontend.webapp\\WebDroneAi\\wwwroot\\css\\open-iconic\\README.md",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\README.md"
+    },
+    {
+      "Id": "C:\\task\\projects\\BSI.RND.DRONEAI\\frontend.webapp\\WebDroneAi\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\task\\projects\\BSI.RND.DRONEAI\\frontend.webapp\\WebDroneAi\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.eot"
+    },
+    {
+      "Id": "C:\\task\\projects\\BSI.RND.DRONEAI\\frontend.webapp\\WebDroneAi\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.otf"
+    },
+    {
+      "Id": "C:\\task\\projects\\BSI.RND.DRONEAI\\frontend.webapp\\WebDroneAi\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.svg"
+    },
+    {
+      "Id": "C:\\task\\projects\\BSI.RND.DRONEAI\\frontend.webapp\\WebDroneAi\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.ttf"
+    },
+    {
+      "Id": "C:\\task\\projects\\BSI.RND.DRONEAI\\frontend.webapp\\WebDroneAi\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
+    },
+    {
+      "Id": "C:\\task\\projects\\BSI.RND.DRONEAI\\frontend.webapp\\WebDroneAi\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\task\\projects\\BSI.RND.DRONEAI\\frontend.webapp\\WebDroneAi\\wwwroot\\eira.png",
+      "PackagePath": "staticwebassets\\eira.png"
+    },
+    {
+      "Id": "C:\\task\\projects\\BSI.RND.DRONEAI\\frontend.webapp\\WebDroneAi\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "C:\\task\\projects\\BSI.RND.DRONEAI\\frontend.webapp\\WebDroneAi\\wwwroot\\js\\leaflet.js",
+      "PackagePath": "staticwebassets\\js\\leaflet.js"
+    },
+    {
+      "Id": "C:\\task\\projects\\BSI.RND.DRONEAI\\frontend.webapp\\WebDroneAi\\wwwroot\\js\\leafletMap.js",
+      "PackagePath": "staticwebassets\\js\\leafletMap.js"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.WebDroneAi.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.WebDroneAi.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.WebDroneAi.props",
+      "PackagePath": "build\\WebDroneAi.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.WebDroneAi.props",
+      "PackagePath": "buildMultiTargeting\\WebDroneAi.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.WebDroneAi.props",
+      "PackagePath": "buildTransitive\\WebDroneAi.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

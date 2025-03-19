@@ -1,0 +1,72 @@
+referencee:
+https://www.researchgate.net/publication/378435004_Improved_small-object_detection_using_YOLOv8_A_comparative_study
+
+====================================================================================================================
+ssh edwin_gunawan@10.12.0.8 -L 1461:10.224.0.126:3306 -p 2434
+
+azure blob storage:
+{
+  "connectionstringazure": "DefaultEndpointsProtocol=https;AccountName=rndstorage2;AccountKey=99JL4roWL4FtwmZLXeu3jVzxs1Ckh0BVrL4SiTW4FAKc7PPaLekLXt1bgLiibORDdx0MKg7MRxTU+AStq4ULXw==;EndpointSuffix=core.windows.net"
+}
+
+{
+  "Db": "User ID=rnd_eagle;Password=rndeagle2024;Host=azbsisqlt001.postgres.database.azure.com;Port=5432;Database=eagle_drone;Pooling=true;SearchPath=poc;",
+  "DbArea": "User ID=rndeagle;Password=rndeagle2024;Host=azbsisqlt001.postgres.database.azure.com;Port=5432;Database=eagle_drone;Pooling=true;SearchPath=poc_location;"
+}
+
+
+
+DB POC:
+User ID=rnd_eagle;Password=rndeagle2024;Host=azbsisqlt001.postgres.database.azure.com;Port=5432;Database=eagle_drone;Pooling=true;SearchPath=poc;
+
+DB Location:
+User ID=rnd_eagle;Password=rndeagle2024;Host=azbsisqlt001.postgres.database.azure.com;Port=5432;Database=eagle_drone;Pooling=true;SearchPath=poc_location;
+
+connect:
+psql -h azbsisqlt001.postgres.database.azure.com -p 5432 -U rnd_eagle -d eagle_drone
+
+sorry mas ternyata salah lihat
+user: rnd_eagle
+pass: rndeagle2024
+
+dump:
+pg_dump -U rnd_eagle -h azbsisqlt001.postgres.database.azure.com eagle_drone > C:\task\projects\BSI.RND.DRONEAI\db\eagle_drone_120022025.sql
+
+import:
+psql -U postgres -h localhost -d eagle_drone -f C:\task\projects\BSI.RND.DRONEAI\db\eagle_drone_120022025.sql
+=======================================================================================================================
+
+set AZURE_STORAGE_ACCOUNT=rndgeneralstorage
+set AZURE_STORAGE_KEY=wm5ByC5UJLK5w6jq80XzVuMEvsMoLqiLPu//SaV+O8uOzzVslzRXfn8sLr4NUAIw0gdrmD4wy6PM+ASt83PAcA==
+
+az login --service-principal -u <appId> -p <password> --tenant <tenant>
+
+azure cli command:
+
+# Log in to Azure
+az login
+
+# Set the subscription (if needed)
+az account set --subscription "My Subscription"
+
+# List storage accounts
+az storage account list --output table
+
+# Get the storage account key
+account_key=$(az storage account keys list --account-name mystorageaccount --query '[0].value' --output tsv)
+
+# Create a container
+az storage container create --name mycontainer --account-name mystorageaccount --account-key $account_key
+
+# Upload a file
+az storage blob upload --container-name imagedetection --file C:\Users\kubil\Pictures\Screenshots\test.png --name mytest.png --account-name rndgeneralstorage --account-key wm5ByC5UJLK5w6jq80XzVuMEvsMoLqiLPu//SaV+O8uOzzVslzRXfn8sLr4NUAIw0gdrmD4wy6PM+ASt83PAcA==
+
+# List blobs in the container
+az storage blob list --container-name imagedetection --account-name rndgeneralstorage --account-key wm5ByC5UJLK5w6jq80XzVuMEvsMoLqiLPu//SaV+O8uOzzVslzRXfn8sLr4NUAIw0gdrmD4wy6PM+ASt83PAcA== --output table
+
+
+==========================================================================
+
+repository:
+https://bsi-devops@dev.azure.com/bsi-devops/BSI.RND.DRONEAI/_git/backend.upload
+

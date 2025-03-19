@@ -1,0 +1,154 @@
+/* Your CSS styles here */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.file-upload {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border: 2px dashed #4caf50;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.file-upload:hover {
+    background: #e8f5e9;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 2px solid #4caf50;
+    border-radius: 5px;
+    background-color: white;
+    font-size: 16px;
+    color: #333;
+    appearance: none; /* Remove default arrow */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10"><polygon points="0,0 10,0 5,5" fill="#4caf50"/></svg>'); /* Custom arrow */
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 10px;
+}
+
+select:focus {
+    outline: none;
+    border-color: #45a049; /* Darker green on focus */
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between; /* Space between buttons */
+    margin-top: 10px;
+}
+
+.upload-button, .refresh-button {
+    background-color: #4caf50; /* Green for upload button */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    flex: 1; /* Make buttons take equal space */
+    margin-right: 10px; /* Space between buttons */
+    transition: background 0.3s;
+}
+
+.upload-button:hover {
+    background-color: #45a049;
+}
+
+.refresh-button {
+    background-color: #2196F3; /* Blue for refresh button */
+}
+
+.refresh-button:hover {
+    background-color: #1976D2;
+}
+
+.upload-button:last-child, .refresh-button:last-child {
+    margin-right: 0; /* Remove margin for the last button */
+}
+
+#progressBarContainer {
+    width: 100%;
+    background-color: #f3f3f3;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+#progressBar {
+    width: 0%;
+    height: 30px;
+    background-color: #4caf50;
+    border-radius: 5px;
+}
+
+#progress {
+    text-align: center;
+    margin-top: 5px;
+    color: #333;
+}
+
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #4caf50;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 1000;
+}
+
+.notification.error {
+    background-color: #f44336; /* Red */
+}
+
+.notification.show {
+    opacity: 1;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.gallery img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin: 5px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}

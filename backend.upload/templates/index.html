@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Upload</title>
+    <link rel="stylesheet" href="../templates/styles.css"> <!-- Link to the external CSS file -->
+</head>
+<body>
+    <div class="container">
+        <h2>Upload Your Files to Azure Blob Storage</h2>
+        <form id="uploadForm" enctype="multipart/form-data">
+            <label class="file-upload" for="fileInput">
+                Select Multiple Files
+            </label>
+            <input type="file" id="fileInput" multiple>
+            <select id="folderSelect">
+                <option value="">Select Folder</option>
+                <option value="area1">Area 1</option>
+                <option value="area2">Area 2</option>
+                <option value="area3">Area 3</option>
+            </select>
+            <div class="button-container">
+                <button type="button" class="upload-button" id="uploadButton">Upload</button>
+                <button type="button" class="refresh-button" id="refreshButton">Refresh Gallery</button>
+            </div>
+        </form>
+        <div id="progress"></div>
+        <div id="progressBarContainer">
+            <div id="progressBar"></div>
+        </div>
+        <div class="gallery" id="gallery"></div>
+    </div>
+    <div id="notification" class="notification"></div>
+    <script src="../templates/index.js"></script>
+</body>
+</html>

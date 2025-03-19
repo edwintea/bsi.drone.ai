@@ -1,0 +1,126 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\task\\projects\\BSI.RND.DRONEAI\\frontend.webapp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C3B30894-4E55-4525-9056-DD34225D7660}|WebDroneAi\\WebDroneAi.csproj|c:\\task\\projects\\bsi.rnd.droneai\\frontend.webapp\\webdroneai\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{C3B30894-4E55-4525-9056-DD34225D7660}|WebDroneAi\\WebDroneAi.csproj|solutionrelative:webdroneai\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3B30894-4E55-4525-9056-DD34225D7660}|WebDroneAi\\WebDroneAi.csproj|c:\\task\\projects\\bsi.rnd.droneai\\frontend.webapp\\webdroneai\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3B30894-4E55-4525-9056-DD34225D7660}|WebDroneAi\\WebDroneAi.csproj|solutionrelative:webdroneai\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3B30894-4E55-4525-9056-DD34225D7660}|WebDroneAi\\WebDroneAi.csproj|c:\\task\\projects\\bsi.rnd.droneai\\frontend.webapp\\webdroneai\\pages\\dashboard\\imagedatabase.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C3B30894-4E55-4525-9056-DD34225D7660}|WebDroneAi\\WebDroneAi.csproj|solutionrelative:webdroneai\\pages\\dashboard\\imagedatabase.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3B30894-4E55-4525-9056-DD34225D7660}|WebDroneAi\\WebDroneAi.csproj|c:\\task\\projects\\bsi.rnd.droneai\\frontend.webapp\\webdroneai\\pages\\dashboard\\caselist.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C3B30894-4E55-4525-9056-DD34225D7660}|WebDroneAi\\WebDroneAi.csproj|solutionrelative:webdroneai\\pages\\dashboard\\caselist.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3B30894-4E55-4525-9056-DD34225D7660}|WebDroneAi\\WebDroneAi.csproj|c:\\task\\projects\\bsi.rnd.droneai\\frontend.webapp\\webdroneai\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C3B30894-4E55-4525-9056-DD34225D7660}|WebDroneAi\\WebDroneAi.csproj|solutionrelative:webdroneai\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3B30894-4E55-4525-9056-DD34225D7660}|WebDroneAi\\WebDroneAi.csproj|c:\\task\\projects\\bsi.rnd.droneai\\frontend.webapp\\webdroneai\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C3B30894-4E55-4525-9056-DD34225D7660}|WebDroneAi\\WebDroneAi.csproj|solutionrelative:webdroneai\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ImageDatabase.razor",
+              "DocumentMoniker": "C:\\task\\projects\\BSI.RND.DRONEAI\\frontend.webapp\\WebDroneAi\\Pages\\Dashboard\\ImageDatabase.razor",
+              "RelativeDocumentMoniker": "WebDroneAi\\Pages\\Dashboard\\ImageDatabase.razor",
+              "ToolTip": "C:\\task\\projects\\BSI.RND.DRONEAI\\frontend.webapp\\WebDroneAi\\Pages\\Dashboard\\ImageDatabase.razor",
+              "RelativeToolTip": "WebDroneAi\\Pages\\Dashboard\\ImageDatabase.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-19T03:28:50.198Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CaseList.razor",
+              "DocumentMoniker": "C:\\task\\projects\\BSI.RND.DRONEAI\\frontend.webapp\\WebDroneAi\\Pages\\Dashboard\\CaseList.razor",
+              "RelativeDocumentMoniker": "WebDroneAi\\Pages\\Dashboard\\CaseList.razor",
+              "ToolTip": "C:\\task\\projects\\BSI.RND.DRONEAI\\frontend.webapp\\WebDroneAi\\Pages\\Dashboard\\CaseList.razor",
+              "RelativeToolTip": "WebDroneAi\\Pages\\Dashboard\\CaseList.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-19T03:28:44.352Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "_Imports.razor",
+              "DocumentMoniker": "C:\\task\\projects\\BSI.RND.DRONEAI\\frontend.webapp\\WebDroneAi\\_Imports.razor",
+              "RelativeDocumentMoniker": "WebDroneAi\\_Imports.razor",
+              "ToolTip": "C:\\task\\projects\\BSI.RND.DRONEAI\\frontend.webapp\\WebDroneAi\\_Imports.razor",
+              "RelativeToolTip": "WebDroneAi\\_Imports.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-19T03:25:18.649Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "App.razor",
+              "DocumentMoniker": "C:\\task\\projects\\BSI.RND.DRONEAI\\frontend.webapp\\WebDroneAi\\App.razor",
+              "RelativeDocumentMoniker": "WebDroneAi\\App.razor",
+              "ToolTip": "C:\\task\\projects\\BSI.RND.DRONEAI\\frontend.webapp\\WebDroneAi\\App.razor",
+              "RelativeToolTip": "WebDroneAi\\App.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-19T03:23:46.096Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\task\\projects\\BSI.RND.DRONEAI\\frontend.webapp\\WebDroneAi\\appsettings.json",
+              "RelativeDocumentMoniker": "WebDroneAi\\appsettings.json",
+              "ToolTip": "C:\\task\\projects\\BSI.RND.DRONEAI\\frontend.webapp\\WebDroneAi\\appsettings.json",
+              "RelativeToolTip": "WebDroneAi\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-02-19T03:23:33.76Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\task\\projects\\BSI.RND.DRONEAI\\frontend.webapp\\WebDroneAi\\Program.cs",
+              "RelativeDocumentMoniker": "WebDroneAi\\Program.cs",
+              "ToolTip": "C:\\task\\projects\\BSI.RND.DRONEAI\\frontend.webapp\\WebDroneAi\\Program.cs",
+              "RelativeToolTip": "WebDroneAi\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-19T03:23:24.384Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

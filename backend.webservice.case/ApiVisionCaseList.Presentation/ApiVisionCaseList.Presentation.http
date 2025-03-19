@@ -1,0 +1,6 @@
+@ApiVisionCaseList.Presentation_HostAddress = http://localhost:5272
+
+GET {{ApiVisionCaseList.Presentation_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

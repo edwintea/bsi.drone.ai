@@ -1,0 +1,50 @@
+trigger:
+  - main  # Trigger the pipeline on changes to the main branch
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+  # Step 1: Set up Python
+  - task: UsePythonVersion@0
+    inputs:
+      versionSpec: '3.12'
+    displayName: 'Set up Python'
+
+  # Step 2: Install dependencies
+  - script: |
+      python -m pip install --upgrade pip 
+      pip install -r requirements.txt 
+    displayName: 'Install dependencies'
+
+  # Step 3: Run tests
+  - script: |
+      pip install pytest pytest-azurepipelines
+      pytest
+    displayName: 'Run tests'
+
+  # Step 4: Archive application files
+  - task: ArchiveFiles@2
+    displayName: 'Archive files'
+    inputs:
+      rootFolderOrFile: $(System.DefaultWorkingDirectory)  # Specify the root folder
+      includeRootFolder: false  # Do not include the root folder in the archive
+      archiveType: zip  # Specify the archive type
+      archiveFile: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip  # Path to the zip file
+      replaceExistingArchive: true  # Replace existing archive if it exists
+
+  # Step 5: Publish build artifacts
+  - task: PublishBuildArtifacts@1
+    inputs:
+      PathtoPublish: '$(Build.ArtifactStagingDirectory)'  # Path to the artifacts
+      ArtifactName: 'drop'  # Name of the artifact
+      publishLocation: 'Container'  # Publish location
+
+  # Step 6: Deploy to Azure Web App
+  - task: AzureWebApp@1
+    inputs:
+      azureSubscription: ''
+      appType: 'RestApi' 
+      appName: 'drone-upload'
+      package: '$(Build.ArtifactStagingDirectory)/*.zip'  # Path to the zip file
+    displayName: 'Deploy to Azure Web App'

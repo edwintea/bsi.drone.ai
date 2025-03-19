@@ -1,0 +1,249 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\task\\projects\\BSI.RND.DRONEAI\\backend.webservice.case\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F54374EF-D204-47AA-BEF9-780D5597BDEB}|ApiVisionCaseList.Presentation\\ApiVisionCaseList.Presentation.csproj|c:\\task\\projects\\bsi.rnd.droneai\\backend.webservice.case\\apivisioncaselist.presentation\\config\\db.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{F54374EF-D204-47AA-BEF9-780D5597BDEB}|ApiVisionCaseList.Presentation\\ApiVisionCaseList.Presentation.csproj|solutionrelative:apivisioncaselist.presentation\\config\\db.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{576409E8-CC30-44C0-8F05-441A8C865808}|ApiVisionCaseList.Persistence\\ApiVisionCaseList.Persistence.csproj|c:\\task\\projects\\bsi.rnd.droneai\\backend.webservice.case\\apivisioncaselist.persistence\\configuration\\areaconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{576409E8-CC30-44C0-8F05-441A8C865808}|ApiVisionCaseList.Persistence\\ApiVisionCaseList.Persistence.csproj|solutionrelative:apivisioncaselist.persistence\\configuration\\areaconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{937EBA04-C431-4467-994F-0027B9FE5475}|ApiVisionCaseList.Infrastructure\\ApiVisionCaseList.Infrastructure.csproj|c:\\task\\projects\\bsi.rnd.droneai\\backend.webservice.case\\apivisioncaselist.infrastructure\\managedfileuploader\\webhostconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{937EBA04-C431-4467-994F-0027B9FE5475}|ApiVisionCaseList.Infrastructure\\ApiVisionCaseList.Infrastructure.csproj|solutionrelative:apivisioncaselist.infrastructure\\managedfileuploader\\webhostconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F54374EF-D204-47AA-BEF9-780D5597BDEB}|ApiVisionCaseList.Presentation\\ApiVisionCaseList.Presentation.csproj|c:\\task\\projects\\bsi.rnd.droneai\\backend.webservice.case\\apivisioncaselist.presentation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F54374EF-D204-47AA-BEF9-780D5597BDEB}|ApiVisionCaseList.Presentation\\ApiVisionCaseList.Presentation.csproj|solutionrelative:apivisioncaselist.presentation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F54374EF-D204-47AA-BEF9-780D5597BDEB}|ApiVisionCaseList.Presentation\\ApiVisionCaseList.Presentation.csproj|c:\\task\\projects\\bsi.rnd.droneai\\backend.webservice.case\\apivisioncaselist.presentation\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{F54374EF-D204-47AA-BEF9-780D5597BDEB}|ApiVisionCaseList.Presentation\\ApiVisionCaseList.Presentation.csproj|solutionrelative:apivisioncaselist.presentation\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FCF2BE2-5A0C-42F1-B015-164D7E8FE8A8}|ApiVisionCaseList.Domain\\ApiVisionCaseList.Domain.csproj|c:\\task\\projects\\bsi.rnd.droneai\\backend.webservice.case\\apivisioncaselist.domain\\infrastructure\\configazurestorage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1FCF2BE2-5A0C-42F1-B015-164D7E8FE8A8}|ApiVisionCaseList.Domain\\ApiVisionCaseList.Domain.csproj|solutionrelative:apivisioncaselist.domain\\infrastructure\\configazurestorage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FCF2BE2-5A0C-42F1-B015-164D7E8FE8A8}|ApiVisionCaseList.Domain\\ApiVisionCaseList.Domain.csproj|c:\\task\\projects\\bsi.rnd.droneai\\backend.webservice.case\\apivisioncaselist.domain\\infrastructure\\configdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1FCF2BE2-5A0C-42F1-B015-164D7E8FE8A8}|ApiVisionCaseList.Domain\\ApiVisionCaseList.Domain.csproj|solutionrelative:apivisioncaselist.domain\\infrastructure\\configdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{576409E8-CC30-44C0-8F05-441A8C865808}|ApiVisionCaseList.Persistence\\ApiVisionCaseList.Persistence.csproj|c:\\task\\projects\\bsi.rnd.droneai\\backend.webservice.case\\apivisioncaselist.persistence\\context\\areacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{576409E8-CC30-44C0-8F05-441A8C865808}|ApiVisionCaseList.Persistence\\ApiVisionCaseList.Persistence.csproj|solutionrelative:apivisioncaselist.persistence\\context\\areacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{048066B6-84EB-4B0C-AD4C-A11529A93490}|ApiVisionCaseList.Application\\ApiVisionCaseList.Application.csproj|c:\\task\\projects\\bsi.rnd.droneai\\backend.webservice.case\\apivisioncaselist.application\\configmapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{048066B6-84EB-4B0C-AD4C-A11529A93490}|ApiVisionCaseList.Application\\ApiVisionCaseList.Application.csproj|solutionrelative:apivisioncaselist.application\\configmapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{048066B6-84EB-4B0C-AD4C-A11529A93490}|ApiVisionCaseList.Application\\ApiVisionCaseList.Application.csproj|c:\\task\\projects\\bsi.rnd.droneai\\backend.webservice.case\\apivisioncaselist.application\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{048066B6-84EB-4B0C-AD4C-A11529A93490}|ApiVisionCaseList.Application\\ApiVisionCaseList.Application.csproj|solutionrelative:apivisioncaselist.application\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{937EBA04-C431-4467-994F-0027B9FE5475}|ApiVisionCaseList.Infrastructure\\ApiVisionCaseList.Infrastructure.csproj|c:\\task\\projects\\bsi.rnd.droneai\\backend.webservice.case\\apivisioncaselist.infrastructure\\middleware\\middleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{937EBA04-C431-4467-994F-0027B9FE5475}|ApiVisionCaseList.Infrastructure\\ApiVisionCaseList.Infrastructure.csproj|solutionrelative:apivisioncaselist.infrastructure\\middleware\\middleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{937EBA04-C431-4467-994F-0027B9FE5475}|ApiVisionCaseList.Infrastructure\\ApiVisionCaseList.Infrastructure.csproj|c:\\task\\projects\\bsi.rnd.droneai\\backend.webservice.case\\apivisioncaselist.infrastructure\\azureblob\\azureblobservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{937EBA04-C431-4467-994F-0027B9FE5475}|ApiVisionCaseList.Infrastructure\\ApiVisionCaseList.Infrastructure.csproj|solutionrelative:apivisioncaselist.infrastructure\\azureblob\\azureblobservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F54374EF-D204-47AA-BEF9-780D5597BDEB}|ApiVisionCaseList.Presentation\\ApiVisionCaseList.Presentation.csproj|c:\\task\\projects\\bsi.rnd.droneai\\backend.webservice.case\\apivisioncaselist.presentation\\config\\azureblob.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{F54374EF-D204-47AA-BEF9-780D5597BDEB}|ApiVisionCaseList.Presentation\\ApiVisionCaseList.Presentation.csproj|solutionrelative:apivisioncaselist.presentation\\config\\azureblob.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F54374EF-D204-47AA-BEF9-780D5597BDEB}|ApiVisionCaseList.Presentation\\ApiVisionCaseList.Presentation.csproj|c:\\task\\projects\\bsi.rnd.droneai\\backend.webservice.case\\apivisioncaselist.presentation\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{F54374EF-D204-47AA-BEF9-780D5597BDEB}|ApiVisionCaseList.Presentation\\ApiVisionCaseList.Presentation.csproj|solutionrelative:apivisioncaselist.presentation\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AreaConfiguration.cs",
+              "DocumentMoniker": "C:\\task\\projects\\BSI.RND.DRONEAI\\backend.webservice.case\\ApiVisionCaseList.Persistence\\Configuration\\AreaConfiguration.cs",
+              "RelativeDocumentMoniker": "ApiVisionCaseList.Persistence\\Configuration\\AreaConfiguration.cs",
+              "ToolTip": "C:\\task\\projects\\BSI.RND.DRONEAI\\backend.webservice.case\\ApiVisionCaseList.Persistence\\Configuration\\AreaConfiguration.cs",
+              "RelativeToolTip": "ApiVisionCaseList.Persistence\\Configuration\\AreaConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-19T03:05:02.502Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ConfigAzureStorage.cs",
+              "DocumentMoniker": "C:\\task\\projects\\BSI.RND.DRONEAI\\backend.webservice.case\\ApiVisionCaseList.Domain\\Infrastructure\\ConfigAzureStorage.cs",
+              "RelativeDocumentMoniker": "ApiVisionCaseList.Domain\\Infrastructure\\ConfigAzureStorage.cs",
+              "ToolTip": "C:\\task\\projects\\BSI.RND.DRONEAI\\backend.webservice.case\\ApiVisionCaseList.Domain\\Infrastructure\\ConfigAzureStorage.cs",
+              "RelativeToolTip": "ApiVisionCaseList.Domain\\Infrastructure\\ConfigAzureStorage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-19T03:03:34.434Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AreaContext.cs",
+              "DocumentMoniker": "C:\\task\\projects\\BSI.RND.DRONEAI\\backend.webservice.case\\ApiVisionCaseList.Persistence\\Context\\AreaContext.cs",
+              "RelativeDocumentMoniker": "ApiVisionCaseList.Persistence\\Context\\AreaContext.cs",
+              "ToolTip": "C:\\task\\projects\\BSI.RND.DRONEAI\\backend.webservice.case\\ApiVisionCaseList.Persistence\\Context\\AreaContext.cs",
+              "RelativeToolTip": "ApiVisionCaseList.Persistence\\Context\\AreaContext.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAWwAcAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-19T03:02:03.597Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ConfigDb.cs",
+              "DocumentMoniker": "C:\\task\\projects\\BSI.RND.DRONEAI\\backend.webservice.case\\ApiVisionCaseList.Domain\\Infrastructure\\ConfigDb.cs",
+              "RelativeDocumentMoniker": "ApiVisionCaseList.Domain\\Infrastructure\\ConfigDb.cs",
+              "ToolTip": "C:\\task\\projects\\BSI.RND.DRONEAI\\backend.webservice.case\\ApiVisionCaseList.Domain\\Infrastructure\\ConfigDb.cs",
+              "RelativeToolTip": "ApiVisionCaseList.Domain\\Infrastructure\\ConfigDb.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-19T03:00:12.923Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ConfigMapping.cs",
+              "DocumentMoniker": "C:\\task\\projects\\BSI.RND.DRONEAI\\backend.webservice.case\\ApiVisionCaseList.Application\\ConfigMapping.cs",
+              "RelativeDocumentMoniker": "ApiVisionCaseList.Application\\ConfigMapping.cs",
+              "ToolTip": "C:\\task\\projects\\BSI.RND.DRONEAI\\backend.webservice.case\\ApiVisionCaseList.Application\\ConfigMapping.cs",
+              "RelativeToolTip": "ApiVisionCaseList.Application\\ConfigMapping.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-19T02:58:42.783Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "WebHostConfiguration.cs",
+              "DocumentMoniker": "C:\\task\\projects\\BSI.RND.DRONEAI\\backend.webservice.case\\ApiVisionCaseList.Infrastructure\\ManagedFileUploader\\WebHostConfiguration.cs",
+              "RelativeDocumentMoniker": "ApiVisionCaseList.Infrastructure\\ManagedFileUploader\\WebHostConfiguration.cs",
+              "ToolTip": "C:\\task\\projects\\BSI.RND.DRONEAI\\backend.webservice.case\\ApiVisionCaseList.Infrastructure\\ManagedFileUploader\\WebHostConfiguration.cs",
+              "RelativeToolTip": "ApiVisionCaseList.Infrastructure\\ManagedFileUploader\\WebHostConfiguration.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA4AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-19T02:58:31.493Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Db.json",
+              "DocumentMoniker": "C:\\task\\projects\\BSI.RND.DRONEAI\\backend.webservice.case\\ApiVisionCaseList.Presentation\\Config\\Db.json",
+              "RelativeDocumentMoniker": "ApiVisionCaseList.Presentation\\Config\\Db.json",
+              "ToolTip": "C:\\task\\projects\\BSI.RND.DRONEAI\\backend.webservice.case\\ApiVisionCaseList.Presentation\\Config\\Db.json",
+              "RelativeToolTip": "ApiVisionCaseList.Presentation\\Config\\Db.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-02-19T02:54:41.248Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\task\\projects\\BSI.RND.DRONEAI\\backend.webservice.case\\ApiVisionCaseList.Presentation\\appsettings.json",
+              "RelativeDocumentMoniker": "ApiVisionCaseList.Presentation\\appsettings.json",
+              "ToolTip": "C:\\task\\projects\\BSI.RND.DRONEAI\\backend.webservice.case\\ApiVisionCaseList.Presentation\\appsettings.json",
+              "RelativeToolTip": "ApiVisionCaseList.Presentation\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-02-19T02:49:16.744Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\task\\projects\\BSI.RND.DRONEAI\\backend.webservice.case\\ApiVisionCaseList.Presentation\\Program.cs",
+              "RelativeDocumentMoniker": "ApiVisionCaseList.Presentation\\Program.cs",
+              "ToolTip": "C:\\task\\projects\\BSI.RND.DRONEAI\\backend.webservice.case\\ApiVisionCaseList.Presentation\\Program.cs",
+              "RelativeToolTip": "ApiVisionCaseList.Presentation\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-19T02:47:15.267Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "DependencyInjection.cs",
+              "DocumentMoniker": "C:\\task\\projects\\BSI.RND.DRONEAI\\backend.webservice.case\\ApiVisionCaseList.Application\\DependencyInjection.cs",
+              "RelativeDocumentMoniker": "ApiVisionCaseList.Application\\DependencyInjection.cs",
+              "ToolTip": "C:\\task\\projects\\BSI.RND.DRONEAI\\backend.webservice.case\\ApiVisionCaseList.Application\\DependencyInjection.cs",
+              "RelativeToolTip": "ApiVisionCaseList.Application\\DependencyInjection.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-19T02:58:46.568Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Middleware.cs",
+              "DocumentMoniker": "C:\\task\\projects\\BSI.RND.DRONEAI\\backend.webservice.case\\ApiVisionCaseList.Infrastructure\\MiddleWare\\Middleware.cs",
+              "RelativeDocumentMoniker": "ApiVisionCaseList.Infrastructure\\MiddleWare\\Middleware.cs",
+              "ToolTip": "C:\\task\\projects\\BSI.RND.DRONEAI\\backend.webservice.case\\ApiVisionCaseList.Infrastructure\\MiddleWare\\Middleware.cs",
+              "RelativeToolTip": "ApiVisionCaseList.Infrastructure\\MiddleWare\\Middleware.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-19T02:58:35.136Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "AzureBlob.json",
+              "DocumentMoniker": "C:\\task\\projects\\BSI.RND.DRONEAI\\backend.webservice.case\\ApiVisionCaseList.Presentation\\Config\\AzureBlob.json",
+              "RelativeDocumentMoniker": "ApiVisionCaseList.Presentation\\Config\\AzureBlob.json",
+              "ToolTip": "C:\\task\\projects\\BSI.RND.DRONEAI\\backend.webservice.case\\ApiVisionCaseList.Presentation\\Config\\AzureBlob.json",
+              "RelativeToolTip": "ApiVisionCaseList.Presentation\\Config\\AzureBlob.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAADYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-02-19T02:52:48.671Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\task\\projects\\BSI.RND.DRONEAI\\backend.webservice.case\\ApiVisionCaseList.Presentation\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "ApiVisionCaseList.Presentation\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\task\\projects\\BSI.RND.DRONEAI\\backend.webservice.case\\ApiVisionCaseList.Presentation\\Properties\\launchSettings.json",
+              "RelativeToolTip": "ApiVisionCaseList.Presentation\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-02-19T02:49:40.853Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AzureBlobService.cs",
+              "DocumentMoniker": "C:\\task\\projects\\BSI.RND.DRONEAI\\backend.webservice.case\\ApiVisionCaseList.Infrastructure\\AzureBlob\\AzureBlobService.cs",
+              "RelativeDocumentMoniker": "ApiVisionCaseList.Infrastructure\\AzureBlob\\AzureBlobService.cs",
+              "ToolTip": "C:\\task\\projects\\BSI.RND.DRONEAI\\backend.webservice.case\\ApiVisionCaseList.Infrastructure\\AzureBlob\\AzureBlobService.cs",
+              "RelativeToolTip": "ApiVisionCaseList.Infrastructure\\AzureBlob\\AzureBlobService.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAEwDMAAADlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-18T03:30:49.663Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

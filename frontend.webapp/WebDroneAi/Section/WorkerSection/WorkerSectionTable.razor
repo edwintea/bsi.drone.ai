@@ -1,0 +1,159 @@
+﻿@using System.Net.Http.Headers
+@using System.Text.Json
+@using System.Linq
+@inject IJSRuntime JSRuntime
+@inject IHttpClientFactory ClientFactory
+@inject ISnackbar Snackbar
+@inject IDialogService DialogService
+@inject IConfiguration Configuration
+
+<div class="w-100 d-flex justify-content-end mb-2" style="height:2rem">
+    <MudButton @onclick="OpenDialogAsync" Variant="Variant.Filled" Color="Color.Primary">Add Worker</MudButton>
+</div>
+
+<MudTable Items="@elemtnss"
+          Hover="true" OnCommitEditClick="@(() => OnSelectedFunc())" EditTrigger="TableEditTrigger.RowClick"
+          @bind-SelectedItem="selectedItem1" Filter="new Func<WorkerListData,bool>(FilterFunc)">
+    <ColGroup>
+        <col style="width:20%;" />
+        <col style="width:60%;" />
+        <col style="width:60%;" />
+        <col style="width:50%;" />
+        <col style="width:50%;" />
+
+    </ColGroup>
+    <ToolBarContent>
+        <MudText Typo="Typo.h6">Worker Section</MudText>
+        <MudSpacer />
+        <MudTextField @bind-Value="searchString" Placeholder="Search" Adornment="Adornment.Start" AdornmentIcon="@Icons.Material.Filled.Search" IconSize="Size.Medium" Class="mt-0"></MudTextField>
+    </ToolBarContent>
+    <HeaderContent>
+        <MudTh>ID</MudTh>
+        <MudTh>Username</MudTh>
+        <MudTh>Fullname</MudTh>
+        <MudTh>Email</MudTh>
+        <MudTh>Role</MudTh>
+    </HeaderContent>
+    <RowTemplate>
+        <MudTd DataLabel="ID">
+            @context.Id
+        </MudTd>
+        <MudTd DataLabel="Username">
+            @context.Username
+        </MudTd>
+        <MudTd DataLabel="Fullname">
+            @context.Fullname
+        </MudTd>
+        <MudTd DataLabel="Email">
+            @context.Email
+        </MudTd>
+        <MudTd DataLabel="Role">
+            @context.Role
+        </MudTd>
+    </RowTemplate>
+    <RowEditingTemplate>
+        <MudTd DataLabel="ID">
+            @context.Id
+        </MudTd>
+        <MudTd DataLabel="Username">
+            <MudTextField @bind-Value=@context.Username />
+        </MudTd>
+        <MudTd DataLabel="Fullname">
+            <MudTextField @bind-Value=@context.Fullname />
+        </MudTd>
+        <MudTd DataLabel="Email">
+            <MudTextField @bind-Value=@context.Email />
+        </MudTd>
+        <MudTd DataLabel="Role">
+            @context.Role
+        </MudTd>
+    </RowEditingTemplate>
+    <PagerContent>
+        <MudTablePager />
+    </PagerContent>
+    <EditButtonContent Context="button">
+        <MudIconButton Size="@Size.Small" Icon="@Icons.Material.Outlined.Edit" Class="pa-0" OnClick="@button.ButtonAction" Disabled="@button.ButtonDisabled" />
+    </EditButtonContent>
+</MudTable>
+
+@code {
+    private List<string> editEvents = new();
+    private int valueMultiselect = 1;
+    private string searchString = "";
+    private WorkerListData selectedItem1 = new WorkerListData();
+    private HashSet<WorkerListData> selectedItems = new HashSet<WorkerListData>();
+    private string selectedNamaAssign = string.Empty;
+    private IList<WorkerListData> Elements = new List<WorkerListData>();
+    private IEnumerable<WorkerListData> elemtnss = new List<WorkerListData>();
+    private TableApplyButtonPosition applyButtonPosition = TableApplyButtonPosition.End;
+    private TableEditButtonPosition editButtonPosition = TableEditButtonPosition.End;
+    private string ServiceBackendCaseList = string.Empty;
+    private string ServiceBackendUserList = string.Empty;
+    protected override async Task OnInitializedAsync()
+    {
+        ServiceBackendCaseList = Configuration["UrlBackendCaseList"];
+        ServiceBackendUserList = Configuration["UrlBackendUser"];
+        await GetData();
+    }
+
+    private bool FilterFunc(WorkerListData element)
+    {
+        if (string.IsNullOrWhiteSpace(searchString))
+            return true;
+        if (element.Fullname.Contains(searchString, StringComparison.OrdinalIgnoreCase))
+            return true;
+        if (element.Username.Contains(searchString, StringComparison.OrdinalIgnoreCase))
+            return true;
+        if (element.Email.Contains(searchString, StringComparison.OrdinalIgnoreCase))
+            return true;
+        return false;
+    }
+
+    private async Task<string> OnSelectedFunc()
+    {
+        Snackbar.Add("Proses Kirim Email");
+        var client = ClientFactory.CreateClient();
+        SendEmailAssign param = new SendEmailAssign();
+        param.Id = valueMultiselect;
+        var response = await client.PostAsJsonAsync(ServiceBackendCaseList + "/sendemail", param);
+        if (response.IsSuccessStatusCode)
+        {
+            Snackbar.Add("Email sudah terkirim", Severity.Success);
+        }
+        return "sukses";
+    }
+    private Color SetColor(int progress)
+    {
+        return progress switch
+        {
+            0 => Color.Dark,
+            1 => Color.Primary,
+            2 => Color.Success
+        };
+    }
+    private async Task OpenDialogAsync()
+    {
+        var options = new DialogOptions { CloseOnEscapeKey = true, FullWidth = true };
+        var dialog = await DialogService.ShowAsync<DialogWorkerCreate>("Add Worker", options);
+        var result = dialog.Result;
+        if(result.IsCompleted)
+        {
+
+        }
+    }
+    private async Task GetData()
+    {
+        var client = ClientFactory.CreateClient();
+        var response = await client.GetAsync(ServiceBackendUserList+"/user/getworker");
+        if (response.IsSuccessStatusCode)
+        {
+            var options = new JsonSerializerOptions
+                {
+                    PropertyNameCaseInsensitive = true,
+                };
+            var responsea = response.Content.ReadAsStringAsync();
+            var data = await response.Content.ReadFromJsonAsync<WorkerListResponse>(options);
+            elemtnss = data.Data;
+        }
+    }
+}

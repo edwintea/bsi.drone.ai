@@ -1,0 +1,224 @@
+﻿@using System.Net.Http.Headers
+@using System.Text.Json
+@using System.Linq
+@inject IJSRuntime JSRuntime
+@inject IHttpClientFactory ClientFactory
+@inject ISnackbar Snackbar
+@inject IDialogService DialogService
+@inject IConfiguration Configuration
+
+<MudTable ServerData="GetServerData" @ref="table" Hover=true Breakpoint="Breakpoint.Sm" RowsPerPage="5" Height="400px" OnCommitEditClick="OnSelectedFunc" @bind-SelectedItem="selectedItem1">
+    <ColGroup>
+        <col style="width:10%;" />
+        <col style="width:10%;" />
+        <col style="width:10%;" />
+        <col style="width:10%;" />
+        <col style="width:10%;" />
+        <col style="width:50%;" />
+        <col style="width:70%;" />
+        <col style="width:50%;" />
+
+    </ColGroup>
+    <ToolBarContent>
+        <MudText Typo="Typo.h6">Case List</MudText>
+        <MudSpacer />
+        <MudTextField OnDebounceIntervalElapsed="OnSearch" T="string" Placeholder="Search" Adornment="Adornment.Start" AdornmentIcon="@Icons.Material.Filled.Search" IconSize="Size.Medium" Class="mt-0"></MudTextField>
+    </ToolBarContent>
+    <HeaderContent>
+        <MudTh>Case ID</MudTh>
+        <MudTh>Case Photo</MudTh>
+        <MudTh>Lat</MudTh>
+        <MudTh>Long</MudTh>
+        <MudTh>Area</MudTh>
+        <MudTh>Tanggal Detected</MudTh>
+        <MudTh>Assign To</MudTh>
+        <MudTh>Progress</MudTh>
+    </HeaderContent>
+    <RowTemplate>
+        <MudTd DataLabel="Case ID">
+            @context.caseId
+        </MudTd>
+        <MudTd DataLabel="Case Photo">
+            <MudImage Src="@context.casePhoto" Style="width:50px; height:50px" @onclick="(e)=>OpenDialogAsync(context.casePhoto)" />
+        </MudTd>
+        <MudTd DataLabel="Lat">
+            @context.Lat.ToString().Replace(",", ".")
+        </MudTd>
+        <MudTd DataLabel="Long">
+            @context.Long.ToString().Replace(",", ".")
+        </MudTd>
+        <MudTd DataLabel="Area">
+            <MudText>@context.AreaCarPool</MudText>
+        </MudTd>
+        <MudTd DataLabel="Tanggal Detected">
+            <MudText>@context.tanggalDetected</MudText>
+        </MudTd>
+        <MudTd DataLabel="Assign To">
+            <MudText Typo="Typo.subtitle2">@(NamaAssign(context.assignTo))</MudText>
+        </MudTd>
+        <MudTd DataLabel="Progress">
+            <MudChip T="string" Variant="Variant.Outlined" Color=SetColor(context.Progress)>@context.textProgress</MudChip>
+        </MudTd>
+    </RowTemplate>
+    <RowEditingTemplate>
+        <MudTd DataLabel="Case ID">
+            @context.caseId
+        </MudTd>
+        <MudTd DataLabel="Case Photo">
+            <MudImage Src="@context.casePhoto" Style="width:50px; height:50px" />
+        </MudTd>
+        <MudTd DataLabel="Lat">
+            @context.Lat.ToString().Replace(",", ".")
+        </MudTd>
+        <MudTd DataLabel="Long">
+            @context.Long.ToString().Replace(",",".")
+        </MudTd>
+        <MudTd DataLabel="Area">
+            <MudText>@context.AreaCarPool</MudText>
+        </MudTd>
+        <MudTd DataLabel="Tanggal Detected">
+            <MudText>@context.tanggalDetected</MudText>
+        </MudTd>
+        <MudTd DataLabel="Assign To">
+            <MudSelect T="int" Label="Assign To" @bind-Value="valueMultiselect">
+                @foreach (var i in Assign)
+                {
+                    <MudSelectItem T="int" Value="i.Id">@i.NamaAssign</MudSelectItem>
+                }
+            </MudSelect>
+        </MudTd>
+        <MudTd DataLabel="Progress">
+            <MudChip T="string" Variant="Variant.Outlined" Color=SetColor(context.Progress)>@context.textProgress</MudChip>
+        </MudTd>
+    </RowEditingTemplate>
+    <NoRecordsContent>
+        <MudText>No matching records found</MudText>
+    </NoRecordsContent>
+    <LoadingContent>
+        <MudText>Loading...</MudText>
+    </LoadingContent>
+    <PagerContent>
+        <MudTablePager />
+    </PagerContent>
+    <EditButtonContent Context="button">
+        <MudIconButton Size="@Size.Small" Icon="@Icons.Material.Outlined.Edit" Class="pa-0" OnClick="@button.ButtonAction" Disabled="@button.ButtonDisabled" />
+    </EditButtonContent>
+</MudTable>
+
+@code {
+    private List<string> editEvents = new();
+
+    private MudTable<CaseListModels>? table;
+    private int valueMultiselect = 1;
+    private string searchString = "";
+    private CaseListModels selectedItem1 = new CaseListModels();
+    private IList<AssignToModels> Assign = new List<AssignToModels>();
+    private string ServiceBackendCaseList = string.Empty;
+    private string ServiceBackendUserList = string.Empty;
+    protected override async Task OnInitializedAsync()
+    {
+        ServiceBackendCaseList = Configuration["UrlBackendCaseList"];
+        ServiceBackendUserList = Configuration["UrlBackendUser"];
+        await GetDataAssign();
+    }
+
+    private async Task<string> OnSelectedFunc()
+    {
+        Snackbar.Add("Proses Kirim Email");
+        var client = ClientFactory.CreateClient();
+        SendEmailAssign param = new SendEmailAssign();
+        foreach (var i in Assign.Where(x => x.Id == valueMultiselect))
+        {
+            param.Assignor = valueMultiselect;
+            param.Email = i.Email;
+            param.Id = selectedItem1.caseId;
+            param.Name = i.NamaAssign;
+            param.Long = selectedItem1.Long;
+            param.Lat = selectedItem1.Lat;
+            param.Area = selectedItem1.AreaCarPool;
+        }
+        var aaa = param;
+        var response = await client.PostAsJsonAsync(ServiceBackendCaseList+"/sendemail", param);
+        if (response.IsSuccessStatusCode)
+        {
+            Snackbar.Add("Email sudah terkirim", Severity.Success);
+            await table.ReloadServerData();
+        }
+        return "sukses";
+    }
+    private Color SetColor(int progress)
+    {
+        return progress switch
+        {
+            1 => Color.Dark,
+            2 => Color.Primary,
+            3 => Color.Success
+        };
+    }
+    private async Task GetDataAssign()
+    {
+        var client = ClientFactory.CreateClient();
+        var response = await client.GetAsync(ServiceBackendUserList+"/user/getassign");
+        if (response.IsSuccessStatusCode)
+        {
+            var options = new JsonSerializerOptions
+                {
+                    PropertyNameCaseInsensitive = true,
+                };
+            var responsea = response.Content.ReadAsStringAsync();
+            var data = await response.Content.ReadFromJsonAsync<AssignModelsReponse>(options);
+            Assign = data.Data;
+        }
+    }
+
+    private async Task<TableData<CaseListModels>> GetServerData(TableState state,CancellationToken token)
+    {
+        var dataCaseListModels = new TableData<CaseListModels>();
+        var client = ClientFactory.CreateClient();
+        var queryParam = new Dictionary<string, string>()
+            {
+                ["paging[limit]"] = state.PageSize.ToString(),
+                ["paging[page]"] = (state.Page + 1).ToString(),
+                ["search"] = searchString
+            };
+        var response = await client.GetAsync(QueryHelpers.AddQueryString(ServiceBackendCaseList+"/case/list", queryParam), token);
+        if (response.IsSuccessStatusCode)
+        {
+            var options = new JsonSerializerOptions
+                {
+                    PropertyNameCaseInsensitive = true,
+                };
+            var responsea = response.Content.ReadAsStringAsync();
+            var data = await response.Content.ReadFromJsonAsync<CaseListModelss>(options);
+
+            dataCaseListModels.TotalItems = data.Pagination.RowCount;
+            dataCaseListModels.Items = data.Data;
+        }
+        return dataCaseListModels;
+    }
+    private void OnSearch(string searchTerm)
+    {
+        searchString = searchTerm;
+        table.ReloadServerData();
+    }
+
+    private string NamaAssign(int? Id)
+    {
+        return Assign.Where(x => x.Id == Id).Select(x => x.NamaAssign).FirstOrDefault() ?? string.Empty;
+    }
+    private async Task OpenDialogAsync(string url)
+    {
+        var options = new DialogOptions { CloseOnEscapeKey = true, FullWidth = true };
+        var parameters = new DialogParameters<ImageShowingCaseList>
+            {
+                {x=>x.Image,url}
+            };
+        var dialog = await DialogService.ShowAsync<ImageShowingCaseList>("Preview Image",parameters,options);
+        var result = dialog.Result;
+        if (result.IsCompleted)
+        {
+
+        }
+    }
+}
+

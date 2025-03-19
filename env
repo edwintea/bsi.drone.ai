@@ -1,0 +1,18 @@
+DATABASE_URL='postgresql://rndeagle:E4gl3team@rndpostgres.postgres.database.azure.com/eagle_drone'
+
+#Model
+MODEL_TYPE='yolov8'
+MODEL_VERSION='8.2.42'
+CUSTOM_MODEL="detector/models/yolov8m-200e-712i-10bg-1088.pt"
+CONFIDENCE_TRESHOLD=0.60
+
+#Rabbitmq
+RABBITMQ_URL='app:servicepoc@4.145.121.167/imagedetection'
+
+#Azure Blob Storage 
+ABS_CONNECTION_STRING='DefaultEndpointsProtocol=https;AccountName=rndgeneralstorage;AccountKey=wm5ByC5UJLK5w6jq80XzVuMEvsMoLqiLPu//SaV+O8uOzzVslzRXfn8sLr4NUAIw0gdrmD4wy6PM+ASt83PAcA==;EndpointSuffix=core.windows.net'
+ABS_CONTAINER_NAME='imagedetection'
+#Image Location
+INPUT_FOLDER='input'
+OUTPUT_FOLDER='output'
+PROCESSED_FOLDER='process'

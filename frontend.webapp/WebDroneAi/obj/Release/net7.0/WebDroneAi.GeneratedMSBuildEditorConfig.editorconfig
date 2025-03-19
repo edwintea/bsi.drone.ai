@@ -1,0 +1,114 @@
+is_global = true
+build_property.MudDebugAnalyzer = 
+build_property.MudAllowedAttributePattern = 
+build_property.MudIllegalParameters = 
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = WebDroneAi
+build_property.RootNamespace = WebDroneAi
+build_property.ProjectDir = D:\Api\WebDroneAi\BSI.Rnd.DroneAI\WebDroneAi\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\Api\WebDroneAi\BSI.Rnd.DroneAI\WebDroneAi
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/Api/WebDroneAi/BSI.Rnd.DroneAI/WebDroneAi/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Api/WebDroneAi/BSI.Rnd.DroneAI/WebDroneAi/Dialog/EditDataCaseList.razor]
+build_metadata.AdditionalFiles.TargetPath = RGlhbG9nXEVkaXREYXRhQ2FzZUxpc3QucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Api/WebDroneAi/BSI.Rnd.DroneAI/WebDroneAi/Dialog/ImageShowingObjectDetection.razor]
+build_metadata.AdditionalFiles.TargetPath = RGlhbG9nXEltYWdlU2hvd2luZ09iamVjdERldGVjdGlvbi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Api/WebDroneAi/BSI.Rnd.DroneAI/WebDroneAi/Pages/Counter.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Api/WebDroneAi/BSI.Rnd.DroneAI/WebDroneAi/Pages/Dashboard/Assignment.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGFzaGJvYXJkXEFzc2lnbm1lbnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Api/WebDroneAi/BSI.Rnd.DroneAI/WebDroneAi/Pages/Dashboard/CaseList.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGFzaGJvYXJkXENhc2VMaXN0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Api/WebDroneAi/BSI.Rnd.DroneAI/WebDroneAi/Pages/Dashboard/Home.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGFzaGJvYXJkXEhvbWUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Api/WebDroneAi/BSI.Rnd.DroneAI/WebDroneAi/Pages/Dashboard/ImageDatabase.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGFzaGJvYXJkXEltYWdlRGF0YWJhc2UucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Api/WebDroneAi/BSI.Rnd.DroneAI/WebDroneAi/Pages/Dashboard/ObjectDetectionImage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGFzaGJvYXJkXE9iamVjdERldGVjdGlvbkltYWdlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Api/WebDroneAi/BSI.Rnd.DroneAI/WebDroneAi/Pages/Dashboard/PredictImage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGFzaGJvYXJkXFByZWRpY3RJbWFnZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Api/WebDroneAi/BSI.Rnd.DroneAI/WebDroneAi/Pages/Dashboard/RealtimeMonitoring.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGFzaGJvYXJkXFJlYWx0aW1lTW9uaXRvcmluZy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Api/WebDroneAi/BSI.Rnd.DroneAI/WebDroneAi/Pages/FetchData.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmV0Y2hEYXRhLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Api/WebDroneAi/BSI.Rnd.DroneAI/WebDroneAi/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Api/WebDroneAi/BSI.Rnd.DroneAI/WebDroneAi/Section/CaseList/CaseListTable.razor]
+build_metadata.AdditionalFiles.TargetPath = U2VjdGlvblxDYXNlTGlzdFxDYXNlTGlzdFRhYmxlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Api/WebDroneAi/BSI.Rnd.DroneAI/WebDroneAi/Section/ObjectionDetection/HistoryUploadImageSection.razor]
+build_metadata.AdditionalFiles.TargetPath = U2VjdGlvblxPYmplY3Rpb25EZXRlY3Rpb25cSGlzdG9yeVVwbG9hZEltYWdlU2VjdGlvbi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Api/WebDroneAi/BSI.Rnd.DroneAI/WebDroneAi/Section/ObjectionDetection/UploadImageSection.razor]
+build_metadata.AdditionalFiles.TargetPath = U2VjdGlvblxPYmplY3Rpb25EZXRlY3Rpb25cVXBsb2FkSW1hZ2VTZWN0aW9uLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Api/WebDroneAi/BSI.Rnd.DroneAI/WebDroneAi/Shared/DashboardLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXERhc2hib2FyZExheW91dC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Api/WebDroneAi/BSI.Rnd.DroneAI/WebDroneAi/Shared/SurveyPrompt.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Api/WebDroneAi/BSI.Rnd.DroneAI/WebDroneAi/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Api/WebDroneAi/BSI.Rnd.DroneAI/WebDroneAi/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-6ccjzidx9o
+
+[D:/Api/WebDroneAi/BSI.Rnd.DroneAI/WebDroneAi/Shared/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-jc898u8lz4
+
+[D:/Api/WebDroneAi/BSI.Rnd.DroneAI/WebDroneAi/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Api/WebDroneAi/BSI.Rnd.DroneAI/WebDroneAi/Pages/_Host.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0hvc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 

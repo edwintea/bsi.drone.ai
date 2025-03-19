@@ -1,0 +1,79 @@
+﻿@using System.Net.Http.Headers
+@using System.Text.Json
+@inject IJSRuntime JSRuntime
+@inject IHttpClientFactory ClientFactory
+@inject IConfiguration Configuration
+<MudGrid Class="pt-6">
+    <MudItem xs="12" sm="9">
+        <div class="w-75 h-100">
+            @if (!string.IsNullOrEmpty(Imagesrc))
+            {
+                <MudImage Src="@Imagesrc" Style="width:100%;height:100%" />
+            }
+
+        </div>
+    </MudItem>
+    <MudItem xs="12" sm="3">
+        
+            <MudFileUpload T="IBrowserFile" Accept=".png, .jpg" FilesChanged="UploadFiles2" MaximumFileCount="100">
+                <ActivatorContent>
+                    <MudButton Variant="Variant.Filled"
+                               Color="Color.Primary"
+                               StartIcon="@Icons.Material.Filled.CloudUpload">
+                        Only image files
+                    </MudButton>
+                </ActivatorContent>
+            </MudFileUpload>
+
+    </MudItem>
+</MudGrid>
+
+
+@code {
+    public string Imagesrc = string.Empty;
+    IList<IBrowserFile> files = new List<IBrowserFile>();
+    private string ServiceBackendUpload = string.Empty;
+    private void UploadFiles(IReadOnlyList<IBrowserFile> files)
+    {
+        foreach (var file in files)
+        {
+            this.files.Add(file);
+        }
+        //TODO upload the files to the server
+    }
+
+    private async Task UploadFiles2(IBrowserFile file)
+    {
+        ServiceBackendUpload = Configuration["UrlBackendUpload"];
+        using var content = new MultipartFormDataContent();
+
+        files.Add(file);
+        var fileContent = new StreamContent(file.OpenReadStream(file.Size));
+        fileContent.Headers.ContentType = new MediaTypeHeaderValue(file.ContentType);
+
+        content.Add(
+            content: fileContent,
+            fileName: file.Name,
+            name: "image_file"
+        );
+
+        var client = ClientFactory.CreateClient();
+        var response = await client.PostAsync(ServiceBackendUpload+"/detect",
+               content);
+
+        if (response.IsSuccessStatusCode)
+        {
+            var options = new JsonSerializerOptions
+                {
+                    PropertyNameCaseInsensitive = true,
+                };
+
+            byte[] image = await response.Content.ReadAsByteArrayAsync();
+
+            var imagesrc = Convert.ToBase64String(image);
+            Imagesrc = string.Format("data:image/jpeg;base64,{0}", imagesrc);
+
+
+        }
+    }
+}

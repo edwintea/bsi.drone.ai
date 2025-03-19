@@ -1,0 +1,84 @@
+﻿@page "/assignment/{Id:int}/{Nama}"
+@using System.Net.Http.Headers
+@using System.Text.Json
+@inject IJSRuntime JSRuntime
+@inject IHttpClientFactory ClientFactory
+@inject IConfiguration Configuration
+@inject ISnackbar Snackbar
+
+<MudContainer Fixed=true>
+    <div class="w-100 h-100">
+        <div class="d-flex justify-content-center">
+            <h3>Silakan Memberikan evidence untuk Case @Id</h3>
+        </div>
+        <MudStack Justify=Justify.Center Spacing="2">
+            <MudPaper Class="pa-4">
+                <MudStack>
+                    <MudPaper Width="400" Height="400">
+                        <MudText>@NameFile</MudText>
+                    </MudPaper>
+                    <MudStack Row=true Justify="Justify.FlexEnd">
+                        <MudFileUpload T="IBrowserFile" Accept=".png, .jpg" FilesChanged="UploadFiles" MaximumFileCount="100">
+                            <ActivatorContent>
+                                <MudButton Variant="Variant.Filled"
+                                           Color="Color.Primary"
+                                           StartIcon="@Icons.Material.Filled.CloudUpload">
+                                    Only image files
+                                </MudButton>
+                            </ActivatorContent>
+                        </MudFileUpload>
+                        <MudButton Variant="Variant.Filled" EndIcon="@Icons.Material.Filled.Send" Color="Color.Primary" OnClick="SendFile">Send</MudButton>
+                    </MudStack>
+                </MudStack>
+            </MudPaper>
+        </MudStack>
+    </div>
+</MudContainer>
+
+@code {
+    [Parameter]
+    public int Id { get; set; }
+    [Parameter]
+    public string? Nama { get; set; }
+
+    public string? NameFile { get; set; }
+    IList<IBrowserFile> files = new List<IBrowserFile>();
+    public AssignmenUpdate? request { get; set; }
+    private string ServiceBackendCaseList = string.Empty;
+    private MultipartFormDataContent content = new MultipartFormDataContent();
+    private void UploadFiles(IBrowserFile file)
+    {
+        ServiceBackendCaseList = Configuration["UrlBackendCaseList"];
+
+        files.Add(file);
+        var fileContent = new StreamContent(file.OpenReadStream(file.Size));
+        NameFile = file.Name;
+        fileContent.Headers.ContentType = new MediaTypeHeaderValue(file.ContentType);
+
+        content.Add(
+            content: fileContent,
+            fileName: file.Name,
+            name: "file"
+        );
+        content.Add(new StringContent(Id.ToString()), "Id");
+        content.Add(new StringContent(Nama), "Nama");
+    }
+    private async Task SendFile()
+    {
+        Snackbar.Add("Proses Evidence");
+        var client = ClientFactory.CreateClient();
+        var response = await client.PostAsync(ServiceBackendCaseList + "/case/update",
+               content);
+
+        if (response.IsSuccessStatusCode)
+        {
+            var options = new JsonSerializerOptions
+                {
+                    PropertyNameCaseInsensitive = true,
+                };
+
+            Snackbar.Add("Evidence sudah terkirim", Severity.Success);
+
+        }
+    }
+}

@@ -1,0 +1,21 @@
+﻿@page "/objectdetection"
+@layout DashboardLayout
+
+
+<PageTitle>Object Detection</PageTitle>
+<div class="container w-100 h-100">
+    <MudTabs Elevation="2" Rounded="true" ApplyEffectsToContainer="true" PanelClass="pa-6" Class="h-100">
+        <MudTabPanel Text="Image" Icon="@Icons.Material.Filled.ImageSearch">
+            <UploadImageSection />
+        </MudTabPanel>
+        <MudTabPanel Text="History Upload Image" Icon="@Icons.Material.Filled.History">
+            <HistoryUploadImageSection />
+        </MudTabPanel>
+    </MudTabs>
+</div>
+@code
+{
+
+
+}
+

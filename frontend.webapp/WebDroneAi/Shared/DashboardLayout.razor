@@ -1,0 +1,21 @@
+﻿@inherits LayoutComponentBase
+<MudThemeProvider />
+<MudPopoverProvider />
+<MudDialogProvider />
+<MudSnackbarProvider />
+
+<MudLayout>
+    <div class="ps-md-0 pe-md-0">
+        <div class="d-flex d-md-flex vh-100 w-100 row g-3">
+            <NavMenu />
+            <div class="col-md-9 col-lg-9">
+                <div class="d-flex position-absolute col-md-9 col-lg-9" style="top:2rem">
+                    @Body
+                </div>
+            </div>
+        </div>
+    </div>
+</MudLayout>
+@code {
+
+}
